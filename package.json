@@ -1,7 +1,7 @@
 {
   "name": "main",
   "version": "1.0.0",
-  "description": "not",
+  "description": "A simple Telegram bot built with Node.js and Telegraf that checks the availability of a given URL.\nThe bot sends an HTTP request to the provided link and returns the response status code.",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
