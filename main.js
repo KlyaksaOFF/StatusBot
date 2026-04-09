@@ -1,5 +1,6 @@
-const { Telegraf } = require('telegraf')
-const { message } = require('telegraf/filters')
+import 'dotenv/config'
+import { Telegraf } from 'telegraf';
+import{ message } from 'telegraf/filters';
 
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -16,5 +17,11 @@ const requestUrl = async (url) => {
         }
 }
 
-const result = await requestUrl('')
-console.log(result)
+// const result = await requestUrl('')
+
+
+
+bot.launch()
+
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
